@@ -14,44 +14,52 @@ tap "thoughtbot/formulae"
 
 # Homebrew
 # https://github.com/Homebrew/brew/
-brew "openssl"
-brew "libyaml"
 brew "bash-completion"
-brew "ctags"
 brew "dockutil"
 brew "git"
 brew "htop"
-brew "hub"
 brew "mas"
-brew "readline"
 brew "python"
-brew "postgresql", service_restart: true
-brew "ruby-build"
-brew "rbenv"
-brew "reattach-to-user-namespace"
-brew "spark"
-brew "ssh-copy-id"
-brew "the_silver_searcher"
 brew "tmux"
-brew "tree"
-brew "vim"
 brew "wget"
-brew "zsh"
-brew "homebrew/dupes/rsync"
+brew 'nmap'
+brew 'p7zip'
+brew 'smartmontools'
+brew 'syncthing', restart_service: true
+brew 'xctool'
+
 brew "thoughtbot/formulae/gitsh"
+brew "zsh"
+brew "fish"
+
+brew 'chisel'
+brew 'lame'
+brew 'x264'
+brew 'xvid'
+brew 'ffmpeg'
+brew 'jpeg'
+brew 'libpng'
+brew 'libtiff'
+brew 'youtube-dl'
+
 
 # homebrew-cask
 # https://github.com/caskroom/homebrew-cask
-cask "dropbox"
-cask "fantastical"
 cask "google-chrome"
-cask "iterm2"
-cask "skype"
+cask 'boxer'
+cask 'textmate'
+cask 'oclint'
+cask 'virtualbox'
+cask 'apptrap'
+cask 'spectacle'
+cask 'smcfancontrol'
+cask 'discord'
+cask 'slack'
+cask 'libreoffice'
+cask 'dropbox'
+cask 'steam'
 
 # mas-cli
 # https://github.com/argon/mas
-mas "Evernote", id: 406056744
-mas "1Password", id: 443987910
-mas "Slack", id: 803453959
-mas "Tweetbot", id: 557168941
-mas "OmniFocus", id: 867299399
+mas 'Xcode', id: 497799835
+mas 'Realm Browser', id: 1007457278
