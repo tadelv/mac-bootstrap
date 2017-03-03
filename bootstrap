@@ -26,11 +26,11 @@ export COMMANDLINE_TOOLS="/Library/Developer/CommandLineTools"
 export OLD_DOTFILES_BACKUP=$HOME/old_dotfiles_backup
 export DICTIONARY_DIR=$HOME/Library/Spelling
 
-export DOTFILES_REPO_URL="https://github.com/joshukraine/dotfiles.git"
+export DOTFILES_REPO_URL="https://github.com/tadelv/dotfiles.git"
 export DOTFILES_BRANCH="master"
 export DOTFILES_DIR=$HOME/dotfiles
 
-export BOOTSTRAP_REPO_URL="https://github.com/joshukraine/mac-bootstrap.git"
+export BOOTSTRAP_REPO_URL="https://github.com/tadelv/mac-bootstrap.git"
 export BOOTSTRAP_BRANCH="master"
 export BOOTSTRAP_DIR=$HOME/mac-bootstrap
 
@@ -129,10 +129,10 @@ bootstrap_echo "Done!"
 # 3. Install NVM (https://github.com/creationix/nvm)
 ################################################################################
 
-bootstrap_echo "Step 3: Installing NVM..."
+bootstrap_echo "Skipping step 3: Installing NVM..."
 
 # shellcheck source=/dev/null
-source "$BOOTSTRAP_DIR"/install/nvm
+# source "$BOOTSTRAP_DIR"/install/nvm
 
 bootstrap_echo "Done!"
 
@@ -189,21 +189,6 @@ bootstrap_echo "Done!"
 
 
 ################################################################################
-# 7. Install Ukrainian language utilities
-#
-# Reference:
-# * http://apple.stackexchange.com/a/11842/75491
-# * http://extensions.services.openoffice.org/en/project/ukrainian-dictionary
-################################################################################
-
-bootstrap_echo "Step 7: Installing Ukrainian language utilities..."
-
-cp "$BOOTSTRAP_DIR"/lib/{hyph_uk.dic,uk_UA.aff,uk_UA.dic} "$DICTIONARY_DIR"
-
-bootstrap_echo "Done!"
-
-
-################################################################################
 # 8. Install Powerline-patched fonts
 ################################################################################
 
@@ -216,22 +201,6 @@ cd "$HOME"/src/fonts || exit
 ./install.sh
 cd "$HOME" || exit
 rm -rf "$HOME"/src/fonts
-
-bootstrap_echo "Done!"
-
-
-################################################################################
-# 9. Install Vundle & Vim plugins (https://github.com/VundleVim/Vundle.vim.git)
-################################################################################
-
-bootstrap_echo "Step 9: Installing Vundle and vim plugins..."
-if [ -d "$HOME"/.vim/bundle ]; then
-  rm -rf "$HOME"/.vim/bundle
-fi
-git clone https://github.com/VundleVim/Vundle.vim.git "$HOME"/.vim/bundle/Vundle.vim
-cp -R "$DOTFILES_DIR"/vim/colors "$HOME"/.vim # So Vim won't complain about solarized not being found.
-vim +PluginInstall +qall
-rm -rf "$HOME"/.vim/colors
 
 bootstrap_echo "Done!"
 
