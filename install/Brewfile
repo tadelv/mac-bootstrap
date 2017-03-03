@@ -48,6 +48,7 @@ brew 'youtube-dl'
 cask "google-chrome"
 cask 'boxer'
 cask 'textmate'
+cask 'fork'
 cask 'oclint'
 cask 'virtualbox'
 cask 'apptrap'
