@@ -133,6 +133,7 @@ fi
 rbenv global "$ruby_version"
 rbenv shell "$ruby_version"
 gem update --system
+gem_install_or_update 'iStats'
 gem_install_or_update 'bundler'
 gem_install_or_update 'fastlane'
 gem_install_or_update 'cocoapods'
