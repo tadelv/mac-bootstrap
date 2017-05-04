@@ -22,45 +22,43 @@ brew "mas"
 brew "python"
 brew "tmux"
 brew "wget"
-brew 'nmap'
-brew 'p7zip'
-brew 'smartmontools'
-brew 'syncthing', restart_service: true
-brew 'xctool'
+brew "nmap"
+brew "p7zip"
+brew "smartmontools"
+brew "syncthing", restart_service: true
+brew "xctool"
 
-brew "thoughtbot/formulae/gitsh"
 brew "zsh"
 brew "fish"
 
-brew 'chisel'
-brew 'lame'
-brew 'x264'
-brew 'xvid'
-brew 'ffmpeg'
-brew 'jpeg'
-brew 'libpng'
-brew 'libtiff'
-brew 'youtube-dl'
+brew "chisel"
+brew "lame"
+brew "x264"
+brew "xvid"
+brew "ffmpeg"
+brew "jpeg"
+brew "libpng"
+brew "libtiff"
+brew "youtube-dl"
 
 
 # homebrew-cask
 # https://github.com/caskroom/homebrew-cask
-cask "google-chrome"
-cask 'boxer'
-cask 'textmate'
-cask 'fork'
-cask 'oclint'
-cask 'virtualbox'
-cask 'apptrap'
-cask 'spectacle'
-cask 'smcfancontrol'
-cask 'discord'
-cask 'slack'
-cask 'libreoffice'
-cask 'dropbox'
-cask 'steam'
+cask "chromium"
+cask "boxer"
+cask "textmate"
+cask "fork"
+cask "oclint"
+cask "virtualbox"
+cask "apptrap"
+cask "spectacle"
+cask "smcfancontrol"
+cask "discord"
+cask "slack"
+cask "libreoffice"
+cask "steam"
 
 # mas-cli
 # https://github.com/argon/mas
-mas 'Xcode', id: 497799835
-mas 'Realm Browser', id: 1007457278
+mas "Xcode", id: 497799835
+mas "Realm Browser", id: 1007457278
