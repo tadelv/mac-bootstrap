@@ -45,7 +45,10 @@ brew 'youtube-dl'
 
 # homebrew-cask
 # https://github.com/caskroom/homebrew-cask
-cask "google-chrome"
+cask "chromium"
+cask "opera"
+cask 'tunnelblick'
+cask 'harvest'
 cask 'boxer'
 cask 'textmate'
 cask 'fork'
@@ -57,10 +60,8 @@ cask 'smcfancontrol'
 cask 'discord'
 cask 'slack'
 cask 'libreoffice'
-cask 'dropbox'
 cask 'steam'
 
 # mas-cli
 # https://github.com/argon/mas
 mas 'Xcode', id: 497799835
-mas 'Realm Browser', id: 1007457278
