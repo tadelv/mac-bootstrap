@@ -28,8 +28,8 @@ brew 'smartmontools'
 brew 'syncthing', restart_service: true
 brew 'xctool'
 
-brew "thoughtbot/formulae/gitsh"
 brew "zsh"
+brew "z"
 brew "fish"
 
 brew 'chisel'
