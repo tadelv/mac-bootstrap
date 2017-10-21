@@ -28,11 +28,11 @@ export DICTIONARY_DIR=$HOME/Library/Spelling
 
 export DOTFILES_REPO_URL="https://github.com/tadelv/dotfiles.git"
 export DOTFILES_BRANCH="master"
-export DOTFILES_DIR=$HOME/dotfiles
+export DOTFILES_DIR=$HOME/development/dotfiles
 
 export BOOTSTRAP_REPO_URL="https://github.com/tadelv/mac-bootstrap.git"
-export BOOTSTRAP_BRANCH="master"
-export BOOTSTRAP_DIR=$HOME/mac-bootstrap
+export BOOTSTRAP_BRANCH="dakarai"
+export BOOTSTRAP_DIR=$HOME/development/mac-bootstrap
 
 
 ################################################################################
@@ -113,17 +113,17 @@ bootstrap_echo "Done!"
 ################################################################################
 # 2. Install Oh-My-Zsh (http://ohmyz.sh/)
 ################################################################################
+if false; then
+	bootstrap_echo "Step 2: Installing Oh-My-Zsh..."
 
-bootstrap_echo "Step 2: Installing Oh-My-Zsh..."
+	if [ -d "$HOME"/.oh-my-zsh ]; then
+	  rm -rf "$HOME"/.oh-my-zsh
+	fi
 
-if [ -d "$HOME"/.oh-my-zsh ]; then
-  rm -rf "$HOME"/.oh-my-zsh
+	git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+	bootstrap_echo "Done!"
 fi
-
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-
-bootstrap_echo "Done!"
-
 
 ################################################################################
 # 3. Install NVM (https://github.com/creationix/nvm)
@@ -174,36 +174,36 @@ bootstrap_echo "Done!"
 ################################################################################
 # 6. Set up Tmuxinator (https://github.com/tmuxinator/tmuxinator)
 ################################################################################
+if false; then
+	bootstrap_echo "Step 6: Setting up Tmuxinator..."
 
-bootstrap_echo "Step 6: Setting up Tmuxinator..."
+	gem install tmuxinator
 
-gem install tmuxinator
+	if [ ! -d "$HOME"/.tmuxinator/ ]; then
+	  mkdir "$HOME"/.tmuxinator
+	fi
 
-if [ ! -d "$HOME"/.tmuxinator/ ]; then
-  mkdir "$HOME"/.tmuxinator
+	cp "$BOOTSTRAP_DIR"/lib/default.yml "$HOME"/.tmuxinator/
+
+	bootstrap_echo "Done!"
 fi
-
-cp "$BOOTSTRAP_DIR"/lib/default.yml "$HOME"/.tmuxinator/
-
-bootstrap_echo "Done!"
-
 
 ################################################################################
 # 8. Install Powerline-patched fonts
 ################################################################################
+if false; then
+	bootstrap_echo "Step 8: Installing fixed-width fonts patched for use with Powerline symbols..."
+	if [ -d "$HOME"/src/fonts ]; then
+	  rm -rf "$HOME"/src/fonts
+	fi
+	git clone https://github.com/powerline/fonts.git "$HOME"/src/fonts
+	cd "$HOME"/src/fonts || exit
+	./install.sh
+	cd "$HOME" || exit
+	rm -rf "$HOME"/src/fonts
 
-bootstrap_echo "Step 8: Installing fixed-width fonts patched for use with Powerline symbols..."
-if [ -d "$HOME"/src/fonts ]; then
-  rm -rf "$HOME"/src/fonts
+	bootstrap_echo "Done!"
 fi
-git clone https://github.com/powerline/fonts.git "$HOME"/src/fonts
-cd "$HOME"/src/fonts || exit
-./install.sh
-cd "$HOME" || exit
-rm -rf "$HOME"/src/fonts
-
-bootstrap_echo "Done!"
-
 
 ################################################################################
 # 10. Set macOS preferences
