@@ -49,8 +49,11 @@ brew 'youtube-dl'
 cask 'chromium'
 cask 'opera'
 cask 'tunnelblick'
+cask 'harvest'
 cask 'boxer'
 cask 'textmate'
+cask 'fork'
+cask 'oclint'
 cask 'virtualbox'
 cask 'apptrap'
 cask 'spectacle'
@@ -59,9 +62,6 @@ cask 'discord'
 cask 'slack'
 cask 'libreoffice'
 cask 'steam'
-cask 'plex-media-server'
-cask 'plex-media-player'
-
 
 # mas-cli
 # https://github.com/argon/mas
