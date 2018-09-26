@@ -66,3 +66,5 @@ cask 'steam'
 # mas-cli
 # https://github.com/argon/mas
 mas 'Xcode', id: 497799835
+mas 'Amphetamine', id: 937984704
+mas 'uBlock', id: 1385985095
