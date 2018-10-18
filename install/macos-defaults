@@ -398,7 +398,7 @@ defaults write com.apple.dock autohide-delay -float 0
 # defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Automatically hide and show the Dock
-# defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
@@ -439,6 +439,8 @@ defaults write com.apple.dock showhidden -bool true
 # Bottom right screen corner → Display sleep
 # defaults write com.apple.dock wvous-br-corner -int 10
 # defaults write com.apple.dock wvous-br-modifier -int 0
+# Put display to sleep on top right corner
+defaults write com.apple.dock wvous-tr-corner -int 10
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -756,7 +758,7 @@ defaults write com.apple.commerce AutoUpdate -bool false
 ###############################################################################
 
 # Prevent Photos from opening automatically when devices are plugged in
-# defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
 # Messages                                                                    #

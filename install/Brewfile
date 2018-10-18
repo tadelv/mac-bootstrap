@@ -28,8 +28,6 @@ brew 'smartmontools'
 brew 'syncthing', restart_service: true
 brew 'xctool'
 
-brew 'zsh'
-brew 'z'
 brew 'fish'
 brew 'rbenv'
 
@@ -60,7 +58,6 @@ cask 'spectacle'
 cask 'smcfancontrol'
 cask 'discord'
 cask 'slack'
-cask 'libreoffice'
 cask 'steam'
 
 # mas-cli
