@@ -24,11 +24,10 @@ bootstrap_echo() {
 osname=$(uname)
 export COMMANDLINE_TOOLS="/Library/Developer/CommandLineTools"
 export OLD_DOTFILES_BACKUP=$HOME/old_dotfiles_backup
-export DICTIONARY_DIR=$HOME/Library/Spelling
 
 export DOTFILES_REPO_URL="https://github.com/tadelv/dotfiles.git"
 export DOTFILES_BRANCH="master"
-export DOTFILES_DIR=$HOME/dotfiles
+export DOTFILES_DIR=$HOME/development/repos/dotfiles
 
 export BOOTSTRAP_REPO_URL="https://github.com/tadelv/mac-bootstrap.git"
 export BOOTSTRAP_BRANCH="master"
@@ -111,15 +110,23 @@ bootstrap_echo "Done!"
 
 
 ################################################################################
-# Steps 2 and 3 are gone ;)
+# Step 2, create standard directory structure
 ################################################################################
 
+bootstrap_echo "Step 2: Creating default directory structure ..."
+
+mkdir -p "$HOME/development/repos"
+mkdir -p "$HOME/development/scratch"
+mkdir -p "$HOME/development/playgrounds"
+mkdir -p "$HOME/development/tools"
+
+bootstrap_echo "Done!"
 
 ################################################################################
 # 4. Setup dotfiles (https://github.com/tadelv/dotfiles.git)
 ################################################################################
 
-bootstrap_echo "Step 4: Installing dotfiles..."
+bootstrap_echo "Step 4: Installing dotfiles ..."
 
 if [[ -d $DOTFILES_DIR ]]; then
   bootstrap_echo "Backing up old dotfiles to $HOME/old_dotfiles_backup..."
@@ -132,6 +139,7 @@ bootstrap_echo "Cloning dotfiles repo to ${DOTFILES_DIR} ..."
 
 git clone "$DOTFILES_REPO_URL" -b "$DOTFILES_BRANCH" "$DOTFILES_DIR"
 
+bootstrap_echo "Linking dotfiles ..."
 # shellcheck source=/dev/null
 ruby "$DOTFILES_DIR"/install.rb
 
@@ -142,7 +150,7 @@ bootstrap_echo "Done!"
 # 5. Install ~/bin utilities
 ################################################################################
 
-bootstrap_echo "Step 5: Installing ~/bin utilities..."
+bootstrap_echo "Step 5: Installing ~/bin utilities ..."
 
 cp -R "$BOOTSTRAP_DIR"/bin/* "$HOME"/bin/
 
@@ -166,6 +174,26 @@ bootstrap_echo "Done!"
 #
 # bootstrap_echo "Done!"
 
+################################################################################
+# 9. Change default shell to fish
+################################################################################
+
+update_shell() {
+  local shell_path;
+  shell_path="$(which fish)"
+
+  bootstrap_echo "Changing your shell to fish ..."
+  if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+    bootstrap_echo "Adding '$shell_path' to /etc/shells"
+    sudo sh -c "echo $shell_path >> /etc/shells"
+  fi
+  chsh -s "$shell_path"
+}
+
+bootstrap_echo "Step 9: Changing your shell to fish"
+update_shell
+
+bootstrap_echo "Done!"
 
 ################################################################################
 # 10. Set macOS preferences
