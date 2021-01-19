@@ -30,7 +30,7 @@ export DOTFILES_BRANCH="master"
 export DOTFILES_DIR=$HOME/development/repos/dotfiles
 
 export BOOTSTRAP_REPO_URL="https://github.com/tadelv/mac-bootstrap.git"
-export BOOTSTRAP_BRANCH="master"
+export BOOTSTRAP_BRANCH="minimal"
 export BOOTSTRAP_DIR=$HOME/mac-bootstrap
 
 
