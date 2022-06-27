@@ -20,49 +20,30 @@ brew 'git'
 brew 'git-lfs'
 brew 'htop'
 brew 'mas'
-brew 'python'
-brew 'tmux'
 brew 'wget'
-brew 'nmap'
 brew 'p7zip'
 brew 'smartmontools'
 brew 'syncthing', restart_service: true
 brew 'xctool'
+brew 'ruby'
 
 brew 'fish'
-brew 'rbenv'
 
 brew 'chisel'
-brew 'lame'
-brew 'x264'
-brew 'xvid'
-brew 'ffmpeg'
-brew 'jpeg'
-brew 'libpng'
-brew 'libtiff'
-brew 'youtube-dl'
+brew 'yt-dlp'
 
 
 # homebrew-cask
 # https://github.com/caskroom/homebrew-cask
 cask 'chromium'
-cask 'opera'
 cask 'tunnelblick'
-cask 'harvest'
-cask 'boxer'
 cask 'textmate'
 cask 'fork'
-cask 'oclint'
-cask 'virtualbox'
-cask 'apptrap'
-cask 'spectacle'
+cask 'rectangle'
 cask 'smcfancontrol'
-cask 'discord'
 cask 'slack'
-cask 'steam'
 
 # mas-cli
 # https://github.com/argon/mas
 mas 'Xcode', id: 497799835
 mas 'Amphetamine', id: 937984704
-mas 'uBlock', id: 1385985095
