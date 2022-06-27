@@ -36,7 +36,6 @@ gem_install_or_update() {
     gem update "$@"
   else
     gem install "$@"
-    rbenv rehash
   fi
 }
 
@@ -58,24 +57,6 @@ brew update
 brew bundle -v --global
 
 laptop_echo "Configuring Ruby ..."
-find_latest_ruby() {
-  rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//'
-}
-
-if [ -f "$BOOTSTRAP_DIR/.ruby-version" ]; then
-  ruby_version="$(<"$BOOTSTRAP_DIR/.ruby-version")"
-else
-  ruby_version="$(find_latest_ruby)"
-fi
-
-eval "$(rbenv init -)"
-
-if ! rbenv versions | grep -Fq "$ruby_version"; then
-  RUBY_CONFIGURE_OPTS=--with-openssl-dir=/usr/local/opt/openssl rbenv install -s "$ruby_version"
-fi
-
-rbenv global "$ruby_version"
-rbenv shell "$ruby_version"
 gem update --system
 gem_install_or_update 'iStats'
 gem_install_or_update 'bundler'
