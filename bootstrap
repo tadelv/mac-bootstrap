@@ -118,7 +118,6 @@ bootstrap_echo "Step 2: Creating default directory structure ..."
 mkdir -p "$HOME/development/repos"
 mkdir -p "$HOME/development/scratch"
 mkdir -p "$HOME/development/playgrounds"
-mkdir -p "$HOME/development/tools"
 
 bootstrap_echo "Done!"
 
@@ -207,7 +206,8 @@ source "$BOOTSTRAP_DIR"/install/macos-defaults
 # shellcheck source=/dev/null
 source "$BOOTSTRAP_DIR"/install/macos-dock
 
-rm -rf "$BOOTSTRAP_DIR"
+# TODO: find a way to install Dockutil 3.x (it's not on brew)
+# rm -rf "$BOOTSTRAP_DIR"
 
 bootstrap_echo "Done!"
 

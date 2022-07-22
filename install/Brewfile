@@ -11,13 +11,12 @@ tap 'homebrew/dupes'
 tap 'homebrew/services'
 tap 'homebrew/versions'
 tap 'thoughtbot/formulae'
+tap 'homebrew/cask-drivers'
 
 # Homebrew
 # https://github.com/Homebrew/brew/
 brew 'bash-completion'
-brew 'dockutil'
 brew 'git'
-brew 'git-lfs'
 brew 'htop'
 brew 'mas'
 brew 'wget'
@@ -26,6 +25,9 @@ brew 'smartmontools'
 brew 'syncthing', restart_service: true
 brew 'xctool'
 brew 'ruby'
+brew 'gh'
+brew 'luna-secondary'
+brew 'xcodegen'
 
 brew 'fish'
 
@@ -42,6 +44,7 @@ cask 'fork'
 cask 'rectangle'
 cask 'smcfancontrol'
 cask 'slack'
+cask 'bitwarden'
 
 # mas-cli
 # https://github.com/argon/mas
