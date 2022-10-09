@@ -31,7 +31,7 @@ gem_install_or_update() {
   if gem list "$1" --installed > /dev/null; then
     gem update "$@"
   else
-    gem install "$@"
+    gem install --no-document "$@" 
   fi
 }
 
@@ -56,12 +56,23 @@ brew bundle -v --global
 
 ###################################
 # TODO: Configure Brew ruby instead of MacOS version
+
+if [ -d "/usr/local/opt/ruby/bin" ]; then
+  export PATH=/usr/local/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+
 ###################################
-# laptop_echo "Configuring Ruby ..."
-# gem update --system
-# gem_install_or_update 'iStats'
-# gem_install_or_update 'bundler'
-# gem_install_or_update 'fastlane'
-# gem_install_or_update 'cocoapods'
+laptop_echo "Configuring Ruby Gems ..."
+gem update --system
+gem_install_or_update 'iStats'
+gem_install_or_update 'bundler'
+gem_install_or_update 'fastlane'
+gem_install_or_update 'cocoapods'
 # number_of_cores=$(sysctl -n hw.ncpu)
 # bundle config --global jobs $((number_of_cores - 1))
