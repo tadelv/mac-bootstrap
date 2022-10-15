@@ -70,7 +70,6 @@ fi
 ###################################
 laptop_echo "Configuring Ruby Gems ..."
 gem update --system
-gem_install_or_update 'iStats'
 gem_install_or_update 'bundler'
 gem_install_or_update 'fastlane'
 gem_install_or_update 'cocoapods'

@@ -26,7 +26,6 @@ brew 'syncthing', restart_service: true
 brew 'xctool'
 brew 'ruby'
 brew 'gh'
-brew 'luna-secondary'
 brew 'xcodegen'
 
 brew 'fish'
@@ -42,7 +41,6 @@ cask 'tunnelblick'
 cask 'textmate'
 cask 'fork'
 cask 'rectangle'
-cask 'smcfancontrol'
 cask 'slack'
 cask 'bitwarden'
 
