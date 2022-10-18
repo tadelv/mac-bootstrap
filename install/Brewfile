@@ -27,6 +27,7 @@ brew 'xctool'
 brew 'ruby'
 brew 'gh'
 brew 'xcodegen'
+brew 'stats'
 
 brew 'fish'
 
