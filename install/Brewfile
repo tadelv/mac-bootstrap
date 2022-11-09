@@ -27,7 +27,6 @@ brew 'xctool'
 brew 'ruby'
 brew 'gh'
 brew 'xcodegen'
-brew 'stats'
 
 brew 'fish'
 
@@ -44,6 +43,7 @@ cask 'fork'
 cask 'rectangle'
 cask 'slack'
 cask 'bitwarden'
+cask 'stats'
 
 # mas-cli
 # https://github.com/argon/mas
