@@ -36,14 +36,13 @@ brew 'yt-dlp'
 
 # homebrew-cask
 # https://github.com/caskroom/homebrew-cask
-cask 'firefox'
-cask 'tunnelblick'
-cask 'textmate'
 cask 'fork'
 cask 'rectangle'
 cask 'slack'
 cask 'bitwarden'
 cask 'stats'
+cask 'monitorcontrol'
+cask 'visual-studio-code'
 
 # mas-cli
 # https://github.com/argon/mas
