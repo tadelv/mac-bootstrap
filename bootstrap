@@ -204,7 +204,7 @@ bootstrap_echo "Step 10: Setting macOS preferences..."
 source "$BOOTSTRAP_DIR"/install/macos-defaults
 
 # shellcheck source=/dev/null
-source "$BOOTSTRAP_DIR"/install/macos-dock
+# source "$BOOTSTRAP_DIR"/install/macos-dock
 
 # TODO: find a way to install Dockutil 3.x (it's not on brew)
 # rm -rf "$BOOTSTRAP_DIR"
