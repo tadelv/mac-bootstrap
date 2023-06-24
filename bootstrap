@@ -189,6 +189,10 @@ update_shell() {
   chsh -s "$shell_path"
 }
 
+# brew shellenv first before this
+# https://stackoverflow.com/a/66019047/405770
+/opt/homebrew/bin/brew shellenv
+
 bootstrap_echo "Step 9: Changing your shell to fish"
 update_shell
 
