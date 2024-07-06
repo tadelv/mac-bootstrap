@@ -30,6 +30,18 @@ brew 'fish'
 brew 'chisel'
 brew 'yt-dlp'
 
+brew 'platformio'
+brew 'colima'
+brew 'lazygit'
+brew 'docker-buildx'
+brew 'docker-compose'
+brew 'neovim'
+brew 'swiftformat'
+brew 'swiftlint'
+brew 'xcode-build-server'
+brew 'xcodes'
+brew 'tree-sitter'
+
 
 # homebrew-cask
 # https://github.com/caskroom/homebrew-cask
@@ -40,6 +52,11 @@ cask 'bitwarden'
 cask 'stats'
 cask 'monitorcontrol'
 cask 'visual-studio-code'
+cask 'wezterm'
+cask 'font-meslo-lg-nerd-font'
+cask 'font-hack-nerd-font'
+cask 'monitorcontrol'
+
 
 # mas-cli
 # https://github.com/argon/mas
