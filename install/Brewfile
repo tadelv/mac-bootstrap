@@ -41,6 +41,7 @@ brew 'swiftlint'
 brew 'xcode-build-server'
 brew 'xcodes'
 brew 'tree-sitter'
+brew 'tcl-tk'
 
 
 # homebrew-cask
@@ -55,7 +56,6 @@ cask 'visual-studio-code'
 cask 'wezterm'
 cask 'font-meslo-lg-nerd-font'
 cask 'font-hack-nerd-font'
-cask 'monitorcontrol'
 
 
 # mas-cli
