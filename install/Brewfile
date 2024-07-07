@@ -42,6 +42,7 @@ brew 'xcode-build-server'
 brew 'xcodes'
 brew 'tree-sitter'
 brew 'tcl-tk'
+brew 'starship'
 
 
 # homebrew-cask
