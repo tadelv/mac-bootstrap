@@ -41,20 +41,20 @@ brew 'swiftlint'
 brew 'xcode-build-server'
 brew 'xcodes'
 brew 'tree-sitter'
-brew 'tcl-tk'
 brew 'starship'
+brew 'fd'
 
 
 # homebrew-cask
 # https://github.com/caskroom/homebrew-cask
 cask 'fork'
-cask 'rectangle'
+cask 'amethyst'
 cask 'slack'
 cask 'bitwarden'
 cask 'stats'
 cask 'monitorcontrol'
 cask 'visual-studio-code'
-cask 'wezterm'
+cask 'kitty'
 cask 'font-meslo-lg-nerd-font'
 cask 'font-hack-nerd-font'
 
